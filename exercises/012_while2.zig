@@ -21,11 +21,12 @@
 const std = @import("std");
 
 pub fn main() void {
+    const base: u32 = 2;
     var n: u32 = 2;
 
     // Please set the continue expression so that we get the desired
     // results in the print statement below.
-    while (n < 1000) : ??? {
+    while (n < 1000) : (n *= base) {
         // Print the current number
         std.debug.print("{} ", .{n});
     }
